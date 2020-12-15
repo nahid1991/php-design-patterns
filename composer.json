@@ -1,0 +1,20 @@
+{
+    "name": "nahidshaiket/design-patterns-php",
+    "description": "Demonstration of design patterns in PHP",
+    "require": {
+        "php": "7.4.11"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nahid Shaiket",
+            "email": "nahidshaiket10300@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Strategy\\": "strategy"
+        }
+    }
+}
