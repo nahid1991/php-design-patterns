@@ -10,8 +10,8 @@ class WeatherStation
 {
     public function displayWeather(): void {
         $weatherData = new WeatherData();
-        $currentDisplay = new CurrentConditionsDisplay($weatherData);
-        $averageDisplay = new AverageConditionsDisplay($weatherData);
+        new CurrentConditionsDisplay($weatherData);
+        new AverageConditionsDisplay($weatherData);
 
         $weatherData->setMeasurements(80, 65, 30.4);
     }
