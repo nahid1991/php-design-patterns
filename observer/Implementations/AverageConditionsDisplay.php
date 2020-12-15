@@ -1,12 +1,14 @@
 <?php
 
+
 namespace Observer\Implementations;
+
 
 use Observer\Interfaces\DisplayElement;
 use Observer\Interfaces\Observer;
 use Observer\Interfaces\Subject;
 
-class CurrentConditionsDisplay implements Observer, DisplayElement
+class AverageConditionsDisplay implements Observer, DisplayElement
 {
     private float $temperature;
     private float $humidity;
@@ -20,7 +22,7 @@ class CurrentConditionsDisplay implements Observer, DisplayElement
 
     public function display(): void
     {
-        echo("Current conditions: ". $this->temperature. "c, ". $this->humidity. "%, ". $this->pressure. "mm\n");
+        echo("Average conditions: ". $this->temperature. "c, ". $this->humidity. "%, ". $this->pressure. "mm\n");
     }
 
     public function update(float $temperature, float $humidity, float $pressure): void

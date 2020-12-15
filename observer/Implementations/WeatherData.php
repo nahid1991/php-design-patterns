@@ -19,13 +19,11 @@ class WeatherData implements Subject
 
     public function registerObserver(Observer $o): void
     {
-        // TODO: Implement registerObserver() method.
         array_push($this->observers, $o);
     }
 
     public function removeObserver(Observer $o): void
     {
-        // TODO: Implement removeObserver() method.
         foreach ($this->observers as $key => $value) {
             if($value === $o) {
                 unset($this->observers[$key]);
@@ -35,7 +33,6 @@ class WeatherData implements Subject
 
     public function notifyObserver(): void
     {
-        // TODO: Implement notifyObserver() method.
         foreach ($this->observers as $observer) {
             $observer->update($this->temperature, $this->humidity, $this->pressure);
         }
